@@ -1,5 +1,5 @@
 # general settings
-name: EFNet_highrev_single_deblur_voxel  # add debug for quick debug
+name: EFNet_highrev_single_deblur_voxel_debug  # add debug for quick debug
 model_type: ImageEventRestorationModel
 scale: 1
 num_gpu:  1 #4
