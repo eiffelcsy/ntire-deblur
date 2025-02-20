@@ -12,8 +12,8 @@ datasets:
 
     # dataroot: /work/lei_sun/HighREV/train
     # dataroot_voxel: /work/lei_sun/HighREV_voxel/train/voxel
-    dataroot: /scratchDirectory/HighREV/train
-    dataroot_voxel: /scratchDirectory/HighREV/train/voxel
+    dataroot: /common/scratch/users/e/eiffelchong.2023/HighREV/train
+    dataroot_voxel: /common/scratch/users/e/eiffelchong.2023/HighREV/train/voxel
 
     gt_size: 256
     # keep true if use events
@@ -39,8 +39,8 @@ datasets:
 
     # dataroot: /work/lei_sun/HighREV/val
     # dataroot_voxel: /work/lei_sun/HighREV_voxel/val/voxel
-    dataroot: /scratchDirectory/HighREV/val
-    dataroot_voxel: /scratchDirectory/HighREV/val/voxel
+    dataroot: /common/scratch/users/e/eiffelchong.2023/HighREV/val
+    dataroot_voxel: /common/scratch/users/e/eiffelchong.2023/HighREV/val/voxel
 
 
     gt_size: ~
