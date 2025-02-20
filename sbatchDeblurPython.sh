@@ -50,6 +50,7 @@ source ./bin/activate
 
 # If you require any packages, install it as usual before the srun job submission.
 pip3 install -r requirements.txt
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 python3 setup.py develop --no_cuda_ext
 
 # Submit your job to the cluster
