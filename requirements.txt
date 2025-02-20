@@ -13,3 +13,4 @@ tqdm
 yapf
 h5py
 einops
+timm
