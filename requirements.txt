@@ -12,3 +12,4 @@ tb-nightly
 tqdm
 yapf
 h5py
+einops
