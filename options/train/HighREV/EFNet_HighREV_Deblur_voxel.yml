@@ -12,8 +12,8 @@ datasets:
 
     # dataroot: /work/lei_sun/HighREV/train
     # dataroot_voxel: /work/lei_sun/HighREV_voxel/train/voxel
-    dataroot: /PATH/TO/DATASET/HighREV/train
-    dataroot_voxel: /PATH/TO/DATASET/HighREV_voxel/train/voxel
+    dataroot: /scratchDirectory/HighREV/train
+    dataroot_voxel: /scratchDirectory/HighREV/train/voxel
 
     gt_size: 256
     # keep true if use events
@@ -28,8 +28,8 @@ datasets:
     # data loader settings
     use_shuffle: true
     num_worker_per_gpu: 3
-    batch_size_per_gpu: 4 # 4 for 2080, 8 for titan
-    dataset_enlarge_ratio: 4  # accelarate, equals to the num_gpu
+    batch_size_per_gpu: 5 # 4 for 2080, 8 for titan
+    dataset_enlarge_ratio: 1  # accelarate, equals to the num_gpu
     prefetch_mode: cpu
     num_prefetch_queue: 2
 
@@ -39,8 +39,8 @@ datasets:
 
     # dataroot: /work/lei_sun/HighREV/val
     # dataroot_voxel: /work/lei_sun/HighREV_voxel/val/voxel
-    dataroot: /PATH/TO/DATASET/HighREV/train
-    dataroot_voxel: /PATH/TO/DATASET/HighREV_voxel/train/voxel
+    dataroot: /scratchDirectory/HighREV/val
+    dataroot_voxel: /scratchDirectory/HighREV/val/voxel
 
 
     gt_size: ~
