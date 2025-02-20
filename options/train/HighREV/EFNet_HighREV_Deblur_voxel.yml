@@ -30,7 +30,8 @@ datasets:
     num_worker_per_gpu: 3
     batch_size_per_gpu: 8 # 4 for 2080, 8 for titan
     dataset_enlarge_ratio: 1  # accelarate, equals to the num_gpu
-    prefetch_mode: cpu
+    prefetch_mode: cuda
+    pin_memory: true
     num_prefetch_queue: 2
 
   val:
