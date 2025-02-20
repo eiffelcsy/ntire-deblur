@@ -92,7 +92,7 @@ train:
 
 # validation settings
 val:
-  val_freq: !!float 50000 # 2e4
+  val_freq: !!float 50000.0 # 2e4
   save_img: false  
   grids: ~  
   crop_size: ~ # use it of the gpu memory is not enough for whole image inference
@@ -112,7 +112,7 @@ val:
 # logging settings
 logger:
   print_freq: 200
-  save_checkpoint_freq: !!float 2e4
+  save_checkpoint_freq: !!float 20000.0
   use_tb_logger: true
   wandb:
     project: your_project_name
