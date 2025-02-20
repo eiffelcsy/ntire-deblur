@@ -1,5 +1,5 @@
 # general settings
-name: EFNet_highrev_single_deblur_voxel_debug  # add debug for quick debug
+name: EFNet_highrev_single_deblur_voxel  # add debug for quick debug
 model_type: ImageEventRestorationModel
 scale: 1
 num_gpu:  1 #4
@@ -92,7 +92,7 @@ train:
 
 # validation settings
 val:
-  val_freq: !!float 50000.0 # 2e4
+  val_freq: !!float 5e4 # 2e4
   save_img: false  
   grids: ~  
   crop_size: ~ # use it of the gpu memory is not enough for whole image inference
@@ -112,7 +112,7 @@ val:
 # logging settings
 logger:
   print_freq: 200
-  save_checkpoint_freq: !!float 20000.0
+  save_checkpoint_freq: !!float 2e4
   use_tb_logger: true
   wandb:
     project: your_project_name
