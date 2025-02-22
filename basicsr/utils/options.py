@@ -77,11 +77,11 @@ def parse(opt_path, is_train=True):
         opt["path"]["visualization"] = osp.join(experiments_root, "visualization")
 
         # change some options for debug mode
-        if "debug" in opt["name"]:
-            # if 'val' in opt:
-            #     opt['val']['val_freq'] = 8
-            opt["logger"]["print_freq"] = 1
-            # opt['logger']['save_checkpoint_freq'] = 8
+        # if "debug" in opt["name"]:
+        #     if 'val' in opt:
+        #         opt['val']['val_freq'] = 8
+        #     opt["logger"]["print_freq"] = 1
+        #     opt['logger']['save_checkpoint_freq'] = 8
     else:  # test
         results_root = osp.join(opt["path"]["root"], "results", opt["name"])
         opt["path"]["results_root"] = results_root

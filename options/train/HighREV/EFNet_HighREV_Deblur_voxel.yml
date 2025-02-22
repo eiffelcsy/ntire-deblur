@@ -115,8 +115,8 @@ logger:
   save_checkpoint_freq: !!float 2e4
   use_tb_logger: true
   wandb:
-    project: your_project_name
-    resume_id: x
+    project: ntire-deblur-plots
+    resume_id: resume-plots
 
 # dist training settings
 dist_params:
