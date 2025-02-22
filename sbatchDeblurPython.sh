@@ -54,6 +54,8 @@ pip3 install -r requirements.txt
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 python3 setup.py develop --no_cuda_ext
 
+wandb login
+
 srun whichgpu
 # Submit your job to the cluster
 srun --gres=gpu:1 python ./basicsr/train.py -opt options/train/HighREV/EFNet_HighREV_Deblur_voxel.yml
