@@ -28,11 +28,10 @@ dataset_name: HighREV
 # network structure
 network_g:
   type: FinalBidirectionAttenfusion
-  wf: 64  # Base channel number
-  # Add other architecture specific parameters if needed
-  img_chn: 6
-  ev_chn: 20
+  img_chn: 23
+  ev_chn: 2
 
+  recurrent_block_type: convlstm
   num_encoders: 3
   base_num_channels: 32
   num_block: 1
