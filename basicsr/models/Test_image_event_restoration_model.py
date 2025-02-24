@@ -465,7 +465,6 @@ class TestImageEventRestorationModel(BaseModel):
         seq_inner_cnt = 0
 
         for idx, val_data in enumerate(dataloader):
-            print(f"{idx}: {val_data}")
             self.feed_data(val_data)
 
             if self.seq_name == last_seq_name:
