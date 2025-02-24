@@ -1,0 +1,56 @@
+# general settings
+name: test_FinalBidirectionAttenfusion
+model_type: Test_image_event_restoration_model  # Since it uses both image and event data
+scale: 1
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  test:
+    name: highrev-test
+    type: VoxelnpzPngSingleDeblurDataset
+
+    # Update these paths to your test data location
+    dataroot: /common/scratch/users/e/eiffelchong.2023/HighREV/val
+    dataroot_voxel: /common/scratch/users/e/eiffelchong.2023/HighREV/val/voxel
+
+    gt_size: ~
+    norm_voxel: true
+    
+    io_backend:
+      type: disk
+    
+    use_hflip: false
+    use_rot: false
+
+# network structure
+network_g:
+  type: FinalBidirectionAttenfusion
+  wf: 64  # Base channel number
+  # Add other architecture specific parameters if needed
+
+# path
+path:
+  pretrain_network_g: /path/to/your/FinalBidirectionAttenfusion_model.pth
+  strict_load_g: true
+
+# validation/testing settings
+val:
+  save_img: true
+  suffix: ~
+  max_minibatch: 8  # Prevent OOM for large images
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+# dist testing settings
+dist_params:
+  backend: nccl
+  port: 29500 
