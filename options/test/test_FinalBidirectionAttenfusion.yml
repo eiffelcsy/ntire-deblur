@@ -28,7 +28,7 @@ dataset_name: HighREV
 # network structure
 network_g:
   type: FinalBidirectionAttenfusion
-  img_chn: 23
+  img_chn: 13
   ev_chn: 2
 
   recurrent_block_type: convlstm
