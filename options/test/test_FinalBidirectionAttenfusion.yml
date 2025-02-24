@@ -23,22 +23,35 @@ datasets:
     use_hflip: false
     use_rot: false
 
+dataset_name: HighREV
+
 # network structure
 network_g:
   type: FinalBidirectionAttenfusion
   wf: 64  # Base channel number
   # Add other architecture specific parameters if needed
+  img_chn: 6
+  ev_chn: 20
+
+  num_encoders: 3
+  base_num_channels: 32
+  num_block: 1
+  num_residual_blocks: 2
 
 # path
 path:
-  pretrain_network_g: /path/to/your/FinalBidirectionAttenfusion_model.pth
+  pretrain_network_g: /experiments/pretrained_model/REFID-HighREV-single-deblur.pth
   strict_load_g: true
+  resume_state: ~
 
 # validation/testing settings
 val:
   save_img: true
-  suffix: ~
-  max_minibatch: 8  # Prevent OOM for large images
+  save_gt: true
+  grids: ~
+  crop_size: ~
+  rgb2bgr: false
+
   metrics:
     psnr:
       type: calculate_psnr
