@@ -258,7 +258,7 @@ class FinalBidirectionAttenfusion(FinalDecoderRecurrentUNet):
         TODO:  use_reversed_voxel!!!
         """
 
-        print(event)
+        print(event.size())
         # reshape
         if x.dim() == 5:
             x = rearrange(x, "b t c h w -> b (t c) h w")  # sharp
