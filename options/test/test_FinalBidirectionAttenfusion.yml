@@ -1,6 +1,6 @@
 # general settings
 name: test_FinalBidirectionAttenfusion
-model_type: Test_image_event_restoration_model  # Since it uses both image and event data
+model_type: TestImageEventRestorationModel  # Since it uses both image and event data
 scale: 1
 num_gpu: 1
 manual_seed: 10
