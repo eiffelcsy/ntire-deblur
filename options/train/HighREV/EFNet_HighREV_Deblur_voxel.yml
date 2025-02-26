@@ -83,7 +83,7 @@ path:
   pretrain_network_g: experiments/EFNet_highrev_single_deblur_voxel/models/net_g_200000.pth
   strict_load_g: true
   resume_state: ~
-  training_states: ~ # save current trainig model states, for resume
+  # training_states: ~ # save current trainig model states, for resume
   results_root: results/
 
 # training settings
