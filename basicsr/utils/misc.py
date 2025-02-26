@@ -49,6 +49,7 @@ def make_exp_dirs(opt):
             and ("pretrain_network" not in key)
             and ("resume" not in key)
         ):
+            print((key, path))
             os.makedirs(path, exist_ok=True)
 
 
