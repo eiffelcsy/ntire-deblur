@@ -53,6 +53,23 @@ datasets:
     use_hflip: false
     use_rot: false
 
+  test:
+    name: highrev-test
+    type: VoxelnpzPngSingleDeblurDataset
+
+    dataroot: /common/scratch/users/e/eiffelchong.2023/HighREV/val
+    dataroot_voxel: /common/scratch/users/e/eiffelchong.2023/HighREV/val/voxel
+
+    gt_size: ~
+    norm_voxel: true  
+
+    io_backend:
+      type: disk
+    
+    use_hflip: false
+    use_rot: false
+
+
 dataset_name: HighREV
 
 # network structures
@@ -63,10 +80,11 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: ~
+  pretrain_network_g: experiments/EFNet_highrev_single_deblur_voxel/models/net_g_200000.pth
   strict_load_g: true
   resume_state: ~
   training_states: ~ # save current trainig model states, for resume
+  root: /common/scratch/users/e/eiffelchong.2023/baseline_validation/
 
 # training settings
 train:
@@ -93,7 +111,8 @@ train:
 # validation settings
 val:
   val_freq: !!float 5e4 # 2e4
-  save_img: false  
+  save_img: true 
+  save_gt: true
   grids: ~  
   crop_size: ~ # use it of the gpu memory is not enough for whole image inference
   max_minibatch: 8  
