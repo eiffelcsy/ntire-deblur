@@ -84,7 +84,7 @@ path:
   strict_load_g: true
   resume_state: ~
   training_states: ~ # save current trainig model states, for resume
-  root: /common/scratch/users/e/eiffelchong.2023/baseline_validation/
+  root: ~
 
 # training settings
 train:
